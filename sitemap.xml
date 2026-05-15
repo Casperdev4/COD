@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+        <loc>https://carte-store.com/</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://carte-store.com/COD-BO7-Ignite.webp.c6db682ef7d19d804ee31b5374232163.webp</image:loc>
+            <image:caption>Warzone Store — cheat Call of Duty BO7 et Warzone pour PC, PS4, PS5 et Xbox.</image:caption>
+            <image:title>Warzone Store — Cheat COD BO7 &amp; Warzone</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://carte-store.com/cod-bo7-warzone-delta.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://carte-store.com/COD-BO7-Delta.webp.bce2293ee2b372f42860c1a4e940a045.webp</image:loc>
+            <image:caption>Pack Delta — aimbot, ESP et mode streaming pour COD BO7 et Warzone sur PC, PS4, PS5 et Xbox.</image:caption>
+            <image:title>Pack Delta — Cheat COD BO7 &amp; Warzone</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://carte-store.com/cod-bo7-warzone-ignite.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://carte-store.com/COD-BO7-Ignite.webp.c6db682ef7d19d804ee31b5374232163.webp</image:loc>
+            <image:caption>Pack Ignite — spoofer HWID classé, aimbot et ESP pour COD BO7 et Warzone sur PC, PS4, PS5 et Xbox.</image:caption>
+            <image:title>Pack Ignite — Cheat COD BO7 &amp; Warzone</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://carte-store.com/cod-bo7-warzone-unreal.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://carte-store.com/COD-BO7-Unreal.webp.c82fdc5e1a7690eff50cfbaf9cbfd243.webp</image:loc>
+            <image:caption>Pack Unreal — spoofer + cleaner HWID, aimbot, ESP et streaming pour COD BO7 et Warzone sur PC, PS4, PS5 et Xbox.</image:caption>
+            <image:title>Pack Unreal — Cheat COD BO7 &amp; Warzone</image:title>
+        </image:image>
+    </url>
+
+</urlset>
