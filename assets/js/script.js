@@ -36,6 +36,72 @@ const STRIPE_LINKS = {
     REMPLACER_LIEN_STRIPE_110: 'https://buy.stripe.com/00w8wP69kdd14yyfus6Na39'
 };
 
+// Lightbox for screenshots
+(function() {
+    const triggers = document.querySelectorAll('.screenshots-grid a');
+    if (!triggers.length) return;
+
+    const lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.innerHTML = '<button class="lightbox-close" aria-label="Fermer">&times;</button>' +
+                   '<button class="lightbox-nav lightbox-prev" aria-label="Image précédente">&lsaquo;</button>' +
+                   '<button class="lightbox-nav lightbox-next" aria-label="Image suivante">&rsaquo;</button>' +
+                   '<div class="lightbox-stage"><img class="lightbox-img" alt=""><div class="lightbox-counter"></div></div>';
+    document.body.appendChild(lb);
+
+    const lbImg = lb.querySelector('.lightbox-img');
+    const lbCounter = lb.querySelector('.lightbox-counter');
+    const closeBtn = lb.querySelector('.lightbox-close');
+    const prevBtn = lb.querySelector('.lightbox-prev');
+    const nextBtn = lb.querySelector('.lightbox-next');
+
+    const images = Array.from(triggers).map(a => ({
+        src: a.getAttribute('href'),
+        alt: (a.querySelector('img') || {}).alt || ''
+    }));
+    let currentIndex = 0;
+
+    function show(i) {
+        currentIndex = (i + images.length) % images.length;
+        lbImg.src = images[currentIndex].src;
+        lbImg.alt = images[currentIndex].alt;
+        lbCounter.textContent = (currentIndex + 1) + ' / ' + images.length;
+    }
+    function open(i) {
+        show(i);
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+    }
+    function close() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    function next() { show(currentIndex + 1); }
+    function prev() { show(currentIndex - 1); }
+
+    triggers.forEach((trigger, i) => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            open(i);
+        });
+    });
+    closeBtn.addEventListener('click', close);
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+    lb.addEventListener('click', (e) => {
+        if (e.target === lb || e.target.classList.contains('lightbox-stage')) close();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowRight') next();
+        else if (e.key === 'ArrowLeft') prev();
+    });
+})();
+
 document.querySelectorAll('[data-stripe]').forEach(btn => {
     const key = btn.getAttribute('data-stripe');
     const url = STRIPE_LINKS[key];
