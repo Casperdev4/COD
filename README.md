@@ -1,3 +1,0 @@
-# PSN
-# Xbox
-# COD
